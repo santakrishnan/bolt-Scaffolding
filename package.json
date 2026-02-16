@@ -1,0 +1,28 @@
+{
+  "name": "arrow-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modern e-commerce monorepo with Next.js 16, Turborepo, and PNPM",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "type-check": "turbo type-check",
+    "test": "turbo test",
+    "clean": "turbo clean && rm -rf node_modules",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "husky": "^9.0.11",
+    "lucide-react": "^0.469.0",
+    "turbo": "^2.3.3"
+  },
+  "packageManager": "pnpm@9.15.1",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

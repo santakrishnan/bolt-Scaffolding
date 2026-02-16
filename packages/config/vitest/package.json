@@ -1,0 +1,9 @@
+{
+  "name": "@arrow-ecommerce/config-vitest",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./vitest.config.ts",
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}
