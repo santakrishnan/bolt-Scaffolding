@@ -1,4 +1,6 @@
-import * as React from "react";
+'use client'
+
+import { useEffect, useState } from 'react'
 
 /**
  * Custom hook for debouncing values
@@ -6,18 +8,18 @@ import * as React from "react";
  * @param delay - Delay in milliseconds
  * @returns Debounced value
  */
-export function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = React.useState<T>(value);
+export function useDebounce<T>(value: T, delay: number = 500): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
+      setDebouncedValue(value)
+    }, delay)
 
     return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
+      clearTimeout(handler)
+    }
+  }, [value, delay])
 
-  return debouncedValue;
+  return debouncedValue
 }

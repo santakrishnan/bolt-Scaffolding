@@ -1,26 +1,36 @@
-import { Button } from "@arrow-ecommerce/ui";
-import Link from "next/link";
+import { Header } from "@/components/layout/header";
+import { HomeHero } from "ui";
+import { VehicleTypeSelector } from "ui";
+import { ArrowInspectedSection } from "ui";
+import { VehicleFinderSection } from "ui";
+import { BuyingProcess } from "ui";
+import { Background } from "ui";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-8">
-      <main className="flex max-w-4xl flex-col items-center gap-8 text-center">
-        <h1 className="text-6xl font-bold tracking-tight">Arrow E-Commerce</h1>
-        <p className="text-xl text-muted-foreground">
-          Modern, production-ready e-commerce platform built with Next.js 16, Turborepo, and
-          Tailwind CSS 4
-        </p>
-        <div className="flex gap-4">
-          <Button asChild size="lg">
-            <Link href="/used-cars/search">Browse Vehicles</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link href="https://github.com" target="_blank">
-              View on GitHub
-            </Link>
-          </Button>
+    <div>
+      <Header />
+      <HomeHero />
+      <VehicleTypeSelector />
+      <BuyingProcess />
+      <div className="relative">
+        {/* Background SVG */}
+        <div className="absolute inset-0" style={{ 
+          backgroundImage: 'url(/Group.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }} />
+        {/* Semi-transparent Gradient Overlay */}
+        <div className="absolute inset-0" style={{ 
+          background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.8) 19.5%, rgba(244, 244, 244, 0.8) 47.67%)'
+        }} />
+        {/* Content */}
+        <div className="relative z-10">
+          <VehicleFinderSection />
+          <ArrowInspectedSection />
         </div>
-      </main>
+      </div>
     </div>
   );
 }

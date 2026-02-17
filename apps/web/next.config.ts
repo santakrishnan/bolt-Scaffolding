@@ -1,11 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@arrow-ecommerce/ui", "@arrow-ecommerce/utils"],
+  transpilePackages: ["ui", "utils"],
+  images: {
+    domains: ['www.figma.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.figma.com',
+      },
+    ],
+  },
   experimental: {
     turbo: {
       resolveAlias: {
-        "@arrow-ecommerce/ui": "../packages/ui/src",
-        "@arrow-ecommerce/utils": "../packages/utils/src",
+        "ui": "../packages/ui/src",
+        "utils": "../packages/utils/src",
       },
     },
   },

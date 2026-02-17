@@ -1,22 +1,40 @@
+'use client'
+
+import * as React from 'react'
+import { useState, useEffect } from 'react'
+
 /**
- * Custom hook for responsive media queries
+ * Custom hook for media queries
  * @param query - CSS media query string
- * @returns boolean indicating if the query matches
+ * @returns boolean indicating if the media query matches
  */
 export function useMediaQuery(query: string): boolean {
-  if (typeof window === "undefined") return false;
+  const [matches, setMatches] = useState(false)
 
-  const [matches, setMatches] = React.useState(() => window.matchMedia(query).matches);
+  useEffect(() => {
+    const media = window.matchMedia(query)
+    
+    // Set initial value
+    if (media.matches !== matches) {
+      setMatches(media.matches)
+    }
 
-  React.useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
-    const handler = (event: MediaQueryListEvent) => setMatches(event.matches);
+    // Create listener
+    const listener = (event: MediaQueryListEvent) => {
+      setMatches(event.matches)
+    }
 
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, [query]);
+    // Modern browsers
+    if (media.addEventListener) {
+      media.addEventListener('change', listener)
+      return () => media.removeEventListener('change', listener)
+    }
+    // Legacy browsers
+    else {
+      media.addListener(listener)
+      return () => media.removeListener(listener)
+    }
+  }, [matches, query])
 
-  return matches;
+  return matches
 }
-
-import * as React from "react";
