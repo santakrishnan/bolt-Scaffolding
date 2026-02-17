@@ -1,0 +1,13 @@
+/* Arrow Theme Overrides */
+@theme {
+  /* Brand Colors */
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #dbeafe;
+  --color-accent-foreground: #1e40af;
+
+  /* Custom Brand Radius */
+  --radius-base: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+}

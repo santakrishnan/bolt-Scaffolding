@@ -34,5 +34,5 @@
   },
   "typescript.autoClosingTags": false,
   "github.copilot.chat.mcp.enabled": true,
-  "kiroAgent.configureMCP": "Disabled"
+  "kiroAgent.configureMCP": "Enabled"
 }

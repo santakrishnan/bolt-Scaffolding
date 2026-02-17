@@ -1,0 +1,13 @@
+/* Acme Theme Overrides */
+@theme {
+  /* Brand Colors */
+  --color-primary: #7c3aed;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #ede9fe;
+  --color-accent-foreground: #5b21b6;
+
+  /* Custom Brand Radius */
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+}

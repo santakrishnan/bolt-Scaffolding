@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ToyotaType Font Faces
+   ============================================ */
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-LightIt.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-Book.ttf') format('truetype');
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-BookIt.ttf') format('truetype');
+  font-weight: 350;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-RegularIt.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-SemiboldIt.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-BoldIt.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToyotaType';
+  src: url('/fonts/ToyotaType-BlackIt.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* ============================================
+       Colors - shadcn Theme Variables
+       ============================================ */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+   
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+   
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+   
+    --primary: 354 91% 48%;
+    --primary-foreground: 0 0% 100%;
+   
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
+   
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 54%;
+   
+    --accent: 36 25% 50%;
+    --accent-foreground: 0 0% 100%;
+   
+    --destructive: 354 91% 48%;
+    --destructive-foreground: 0 0% 100%;
+   
+    --border: 0 0% 0% / 0.1;
+    --input: 0 0% 0% / 0.1;
+    --ring: 354 91% 48%;
+   
+    /* Base radius (maps to md scale) */
+    --radius: 0.5rem;
+  }
+   
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+   
+    --card: oklch(0.145 0 0);
+    --card-foreground: oklch(0.985 0 0);
+   
+    --popover: oklch(0.145 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+   
+    --primary: oklch(0.646 0.222 41.116);
+    --primary-foreground: oklch(0.985 0 0);
+   
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+   
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.656 0 0);
+   
+    --accent: oklch(0.532 0.053 56.732);
+    --accent-foreground: oklch(0.985 0 0);
+   
+    --destructive: oklch(0.646 0.222 41.116);
+    --destructive-foreground: oklch(0.985 0 0);
+   
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.646 0.222 41.116);
+  }
+}
+
+@theme inline {
+  /* ============================================
+     Colors - Map shadcn to Tailwind
+     ============================================ */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+ 
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+ 
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+ 
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+ 
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+ 
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+ 
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+ 
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+ 
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+ 
+  /* ============================================
+     Typography
+     ============================================ */
+  --font-sans: 'ToyotaType', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+ 
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-md: 1rem;        /* 16px - default */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+  --font-size-5xl: 3rem;       /* 48px */
+ 
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+ 
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+ 
+  /* ============================================
+     Spacing Scale
+     ============================================ */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px - default */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+ 
+  /* ============================================
+     Border Radius (derived from --radius)
+     ============================================ */
+  --radius-xs: calc(var(--radius) - 4px);   /* 2px */
+  --radius-sm: calc(var(--radius) - 2px);   /* 4px */
+  --radius-md: var(--radius);               /* 8px - default */
+  --radius-lg: calc(var(--radius) + 4px);   /* 12px */
+  --radius-xl: calc(var(--radius) + 8px);   /* 16px */
+  --radius-2xl: calc(var(--radius) + 16px); /* 24px */
+  --radius-full: 9999px;
+ 
+  /* ============================================
+     Shadows
+     ============================================ */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-normal);
+  }
+}
