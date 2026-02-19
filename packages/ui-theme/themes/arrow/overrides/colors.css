@@ -1,0 +1,14 @@
+/* Arrow Brand Colors - From Design Tokens */
+@theme {
+  /* Primary: Blue 500 */
+  --color-primary: #0066cc;
+  --color-primary-foreground: #ffffff;
+
+  /* Accent: Blue 50 with Blue 700 foreground */
+  --color-accent: #e0e3f7;
+  --color-accent-foreground: #1c4483;
+
+  /* Destructive: Red 500 */
+  --color-destructive: #eb0a1e;
+  --color-destructive-foreground: #ffffff;
+}

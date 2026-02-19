@@ -1,0 +1,43 @@
+/* Arrow Typography Overrides - From Design Tokens */
+
+/* Desktop Typography (Default) */
+@theme {
+  /* Font Family - Toyota Type (loaded by app via next/font) */
+  --font-family-sans: var(
+    --font-toyota-type,
+    ui-sans-serif,
+    system-ui,
+    sans-serif
+  );
+
+  /* Font Size Scale - Desktop */
+  --font-size-2xs: 10px;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-xl: 20px;
+  --font-size-lg: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 36px;
+  --font-size-4xl: 40px;
+
+  /* Font Weight Scale - Toyota Type specific */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}
+
+/* Mobile Typography - Responsive Overrides */
+@media (max-width: 768px) {
+  @theme {
+    /* Font Size Scale - Mobile (smaller sizes for mobile) */
+    --font-size-md: 14px;
+    --font-size-xl: 16px;
+    --font-size-lg: 20px;
+    --font-size-2xl: 20px;
+    --font-size-3xl: 24px;
+    --font-size-4xl: 32px;
+  }
+}

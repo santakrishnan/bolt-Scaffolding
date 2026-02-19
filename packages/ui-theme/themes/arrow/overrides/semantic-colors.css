@@ -1,0 +1,44 @@
+/* Arrow Semantic Colors - From Design Tokens */
+@theme {
+  /* Core Surfaces */
+  --color-inverse-background: #0a0a0a; /* Neutrals/950 */
+  --color-background: #f5f5f5; /* Neutrals/100 */
+  --color-inverse-foreground: #f5f5f5; /* Neutrals/100 */
+  --color-foreground: #0a0a0a; /* Neutrals/950 */
+  --color-card: #ffffff; /* White */
+  --color-inverse-card: #0a0a0a; /* Neutrals/950 */
+  --color-card-foreground: #0a0a0a; /* Neutrals/950 */
+  --color-inverse-card-foreground: #ffffff; /* White */
+  --color-popover: #ffffff; /* White */
+  --color-popover-foreground: #0a0a0a; /* Neutrals/950 */
+
+  /* Actions */
+  --color-primary: #eb0a1e; /* Red/500 */
+  --color-primary-foreground: #ffffff; /* White */
+  --color-secondary: #0a0a0a; /* Neutrals/950 */
+  --color-secondary-foreground: #ffffff; /* White */
+  --color-accent: #eb0a1e; /* Red/500 */
+  --color-accent-foreground: #ffffff; /* White */
+
+  /* States */
+  --color-muted: #a3a3a3; /* Neutrals/400 */
+  --color-muted-foreground: #525252; /* Neutrals/600 */
+  --color-inverse-muted: #525252; /* Neutrals/600 */
+  --color-inverse-muted-foreground: #a3a3a3; /* Neutrals/400 */
+  --color-destructive: #981b18; /* Red/700 */
+  --color-destructive-foreground: #ffffff; /* White */
+  --color-info: #7d95de; /* Blue/300 */
+  --color-info-foreground: #ffffff; /* White */
+  --color-success: #12b45d; /* Green/500 */
+  --color-success-foreground: #ffffff; /* White */
+  --color-success-strong: #1c5730; /* Green/800 */
+  --color-success-strong-foreground: #ffffff; /* White */
+
+  /* Structure & Interaction */
+  --color-decorative: #0a0a0a; /* Neutrals/950 */
+  --color-inverse-decorative: #f5f5f5; /* Neutrals/100 */
+  --color-border: #d4d4d4; /* Neutrals/300 */
+  --color-inverse-border: #262626; /* Neutrals/800 */
+  --color-input: #fafafa; /* Neutrals/50 */
+  --color-ring: #a0afe7; /* Blue/200 */
+}

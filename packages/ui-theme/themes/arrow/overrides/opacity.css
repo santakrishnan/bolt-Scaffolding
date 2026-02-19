@@ -1,0 +1,7 @@
+/* Arrow Opacity Overrides - From Design Tokens */
+@theme {
+  /* Opacity Scale (percentage values) */
+  --opacity-05: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+}
