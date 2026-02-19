@@ -90,3 +90,4 @@ export {
   SelectTrigger,
   SelectValue,
 } from './select'
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs'

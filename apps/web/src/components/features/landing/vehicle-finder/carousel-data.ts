@@ -9,21 +9,21 @@ export interface PrequalifySlide {
 export const prequalifySlides: PrequalifySlide[] = [
   {
     id: 'advantage',
-    image: '/images/advantages/carousel-image-1-v2.png',
+    image: '/images/advantages/carousel-image-1.png',
     title: 'PREQUALIFY FOR YOUR NEXT TOYOTA',
     subtitle: 'Get personalized rates with a soft credit check. Know your budget before you shop.',
     ctaText: 'Get my free estimate',
   },
   {
     id: 'advantage2',
-    image: '/images/advantages/carousel-image-2-v2.png',
+    image: '/images/advantages/carousel-image-2.png',
     title: 'PREQUALIFY FOR YOUR NEXT TOYOTA',
     subtitle: 'Get personalized rates with a soft credit check. Know your budget before you shop.',
     ctaText: 'Get my free estimate',
   },
   {
     id: 'advantage3',
-    image: '/images/advantages/carousel-image-3-v2.png',
+    image: '/images/advantages/carousel-image-3.png',
     title: 'PREQUALIFY FOR YOUR NEXT TOYOTA',
     subtitle: 'Get personalized rates with a soft credit check. Know your budget before you shop.',
     ctaText: 'Get my free estimate',

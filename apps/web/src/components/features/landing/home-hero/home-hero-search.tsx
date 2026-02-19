@@ -131,7 +131,7 @@ export function HomeHeroSearch() {
 
         {/* Search button */}
         <Button
-          className="h-10 w-10 shrink-0 rounded-full bg-primary font-semibold text-sm text-white hover:bg-primary/90 lg:w-auto lg:px-6"
+          className="h-10 w-10 shrink-0 rounded-full bg-[#FF0202] font-semibold text-sm text-white hover:bg-primary/90 lg:w-auto lg:px-6"
           type="submit"
         >
           <span className="lg:hidden">
@@ -141,5 +141,5 @@ export function HomeHeroSearch() {
         </Button>
       </div>
     </form>
-  )
+  );
 }

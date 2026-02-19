@@ -11,7 +11,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "clean": "rm -rf .next .turbo node_modules"
+    "clean": "rimraf .next .turbo node_modules"
   },
   "dependencies": {
     "embla-carousel-autoplay": "^8.6.0",
@@ -37,6 +37,7 @@
     "autoprefixer": "^10.4.20",
     "jsdom": "^25.0.1",
     "postcss": "^8.4.49",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
