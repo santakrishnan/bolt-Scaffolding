@@ -5,6 +5,7 @@
 @import "./shadows.css";
 @import "./spacing.css";
 @import "./typography.css";
+@import "./sizes.css";
 
 /* Animation */
 @theme {
