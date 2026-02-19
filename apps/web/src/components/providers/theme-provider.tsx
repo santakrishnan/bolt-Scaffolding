@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, use, useState, useCallback } from 'react'
+import { createContext, use, useCallback, useState } from 'react'
 
 interface ThemeContextValue {
   state: {
@@ -27,11 +27,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const setTheme = useCallback((newTheme: 'light' | 'dark' | 'system') => {
     setIsLoading(true)
     setThemeState(newTheme)
-    
+
     // Apply theme to document
     const root = window.document.documentElement
     root.classList.remove('light', 'dark')
-    
+
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
@@ -40,7 +40,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.add(newTheme)
     }
-    
+
     setIsLoading(false)
   }, [])
 

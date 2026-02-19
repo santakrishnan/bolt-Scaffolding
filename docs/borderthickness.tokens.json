@@ -1,0 +1,27 @@
+{
+  "--border-width-1": {
+    "$type": "number",
+    "$value": 1,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2847:4252",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "--border-width-2": {
+    "$type": "number",
+    "$value": 2,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2847:4253",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.isOverride": true
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Mode 1"
+  }
+}

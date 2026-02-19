@@ -1,0 +1,124 @@
+{
+  "--radius-xs": {
+    "$type": "number",
+    "$value": 2,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2446",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:f3a9a194adff4eecc4f3cb2c6204fbaeab43fb58/-1:-1",
+        "targetVariableName": "2",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "--radius-sm": {
+    "$type": "number",
+    "$value": 4,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2449",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:e1c8786c25bf5ac7e30a12c636b73ba8f34feccf/-1:-1",
+        "targetVariableName": "4",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "--radius-md": {
+    "$type": "number",
+    "$value": 8,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2450",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:565539f43c4b9605183ab2562ff3fe197b433c91/-1:-1",
+        "targetVariableName": "8",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "--radius-lg": {
+    "$type": "number",
+    "$value": 12,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2451",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:64e22d3de5989a169f3d8dfa9f1aaa7588bb24b4/-1:-1",
+        "targetVariableName": "12",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "--radius-xl": {
+    "$type": "number",
+    "$value": 16,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2452",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:c9145927e229320c533c46f41c49a128a950a6dc/-1:-1",
+        "targetVariableName": "16",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "--radius-2xl": {
+    "$type": "number",
+    "$value": 24,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2453",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:0da46fa07edb2267e1ce19a5884954f7207467ad/-1:-1",
+        "targetVariableName": "24",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "--radius-full": {
+    "$type": "number",
+    "$value": 9999,
+    "$extensions": {
+      "com.figma.variableId": "VariableID:2613:2454",
+      "com.figma.scopes": [
+        "ALL_SCOPES"
+      ],
+      "com.figma.aliasData": {
+        "targetVariableId": "VariableID:95a964f5e3a1fed6c61efd2b5c13a63f3c7f1bf0/-1:-1",
+        "targetVariableName": "9999",
+        "targetVariableSetId": "VariableCollectionId:147a9ff1fcc3df75144f141fbaf09e6ca915ded9/-1:-1",
+        "targetVariableSetName": "Size Primitive Variables"
+      },
+      "com.figma.isOverride": true
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Mode 1"
+  }
+}

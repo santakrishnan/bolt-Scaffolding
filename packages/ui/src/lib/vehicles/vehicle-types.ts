@@ -4,10 +4,10 @@
  */
 
 export interface VehicleType {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
+  id: string
+  name: string
+  description: string
+  image: string
 }
 
 export const vehicleTypes: VehicleType[] = [
@@ -59,4 +59,4 @@ export const vehicleTypes: VehicleType[] = [
     description: 'Sleek, sporty, two-door',
     image: '/images/categories/convertible.png',
   },
-];
+]

@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, use, useState, useCallback } from 'react'
+import { createContext, use, useCallback, useState } from 'react'
 
 interface CartItem {
   id: string
@@ -36,18 +36,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const addToCart = useCallback((productId: string) => {
     setIsLoading(true)
-    
+
     setItems((prev) => {
       const existing = prev.find((item) => item.id === productId)
-      
+
       if (existing) {
         return prev.map((item) =>
-          item.id === productId
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
+          item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
         )
       }
-      
+
       // Mock product data - in real app, would fetch from API
       return [
         ...prev,
@@ -59,7 +57,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         },
       ]
     })
-    
+
     setIsLoading(false)
   }, [])
 

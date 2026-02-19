@@ -1,13 +1,8 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from 'ui/primitives/accordion';
-import { footerSections } from '@/lib/footer/footer-links';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@tfs-ucmp/ui'
+import Link from 'next/link'
+import { footerSections } from '~/lib/data/footer/footer-links'
 
 /**
  * FooterNavigation - Navigation links with accordion for mobile
@@ -20,17 +15,17 @@ export function FooterNavigation() {
       <div className="hidden grid-cols-4 gap-8 sm:grid lg:gap-12">
         {footerSections.map((section) => (
           <div key={section.title}>
-            <h3 className="mb-4 text-sm font-bold uppercase tracking-wide text-white">
+            <h3 className="mb-4 font-bold text-sm text-white uppercase tracking-wide">
               {section.title}
             </h3>
             <ul className="space-y-3">
               {section.links.map((link) => (
                 <li key={link.label}>
                   <Link
+                    className="text-[#99A1AF] text-sm transition-colors hover:text-[#b3b9c4]"
                     href={link.href}
-                    target={link.external ? '_blank' : undefined}
                     rel={link.external ? 'noopener noreferrer' : undefined}
-                    className="text-sm text-[#99A1AF] transition-colors hover:text-[#b3b9c4]"
+                    target={link.external ? '_blank' : undefined}
                   >
                     {link.label}
                   </Link>
@@ -43,14 +38,14 @@ export function FooterNavigation() {
 
       {/* Mobile Accordion Layout */}
       <div className="sm:hidden">
-        <Accordion type="multiple" className="w-full">
+        <Accordion className="w-full" type="multiple">
           {footerSections.map((section, index) => (
             <AccordionItem
+              className="border-[#333333] border-b"
               key={section.title}
               value={`section-${index}`}
-              className="border-b border-[#333333]"
             >
-              <AccordionTrigger className="py-4 text-left text-sm font-bold uppercase tracking-wide text-white hover:no-underline">
+              <AccordionTrigger className="py-4 text-left font-bold text-sm text-white uppercase tracking-wide hover:no-underline">
                 {section.title}
               </AccordionTrigger>
               <AccordionContent className="pb-4">
@@ -58,10 +53,10 @@ export function FooterNavigation() {
                   {section.links.map((link) => (
                     <li key={link.label}>
                       <Link
+                        className="text-[#99A1AF] text-sm transition-colors hover:text-[#b3b9c4]"
                         href={link.href}
-                        target={link.external ? '_blank' : undefined}
                         rel={link.external ? 'noopener noreferrer' : undefined}
-                        className="text-sm text-[#99A1AF] transition-colors hover:text-[#b3b9c4]"
+                        target={link.external ? '_blank' : undefined}
                       >
                         {link.label}
                       </Link>
@@ -74,5 +69,5 @@ export function FooterNavigation() {
         </Accordion>
       </div>
     </div>
-  );
+  )
 }

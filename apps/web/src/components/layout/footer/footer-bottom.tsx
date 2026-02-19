@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { PhoneIcon, EmailIcon, LocationIcon } from 'ui';
-import { contactInfo } from '@/lib/footer/footer-links';
+import Link from 'next/link'
+import { EmailIcon, LocationIcon, PhoneIcon } from '~/components/shared/icons'
+import { contactInfo } from '~/lib/data/footer/footer-links'
 
 /**
  * FooterBottom - Contact information and copyright
@@ -13,20 +13,18 @@ export function FooterBottom() {
       <div className="mb-6 flex flex-row justify-between gap-4 sm:justify-between">
         {/* Call Us */}
         <Link
-          href={contactInfo.phone.href}
           className="group flex items-center gap-2 transition-colors hover:text-[#b3b9c4]"
+          href={contactInfo.phone.href}
         >
           <div className="text-[#EB0A1E]">
             <PhoneIcon size={20} />
           </div>
           <div>
-            <p className="text-sm text-[#99A1AF] sm:hidden">
+            <p className="text-[#99A1AF] text-sm sm:hidden">{contactInfo.phone.label}</p>
+            <p className="hidden text-[#99A1AF] text-xs sm:block sm:text-sm">
               {contactInfo.phone.label}
             </p>
-            <p className="hidden text-xs text-[#99A1AF] sm:block sm:text-sm">
-              {contactInfo.phone.label}
-            </p>
-            <p className="hidden text-sm font-semibold text-white sm:block sm:text-base">
+            <p className="hidden font-semibold text-sm text-white sm:block sm:text-base">
               {contactInfo.phone.value}
             </p>
           </div>
@@ -34,20 +32,18 @@ export function FooterBottom() {
 
         {/* Email Us */}
         <Link
-          href={contactInfo.email.href}
           className="group flex items-center gap-2 transition-colors hover:text-[#b3b9c4]"
+          href={contactInfo.email.href}
         >
           <div className="text-[#EB0A1E]">
             <EmailIcon size={20} />
           </div>
           <div>
-            <p className="text-sm text-[#99A1AF] sm:hidden">
+            <p className="text-[#99A1AF] text-sm sm:hidden">{contactInfo.email.label}</p>
+            <p className="hidden text-[#99A1AF] text-xs sm:block sm:text-sm">
               {contactInfo.email.label}
             </p>
-            <p className="hidden text-xs text-[#99A1AF] sm:block sm:text-sm">
-              {contactInfo.email.label}
-            </p>
-            <p className="hidden text-sm font-semibold text-white sm:block sm:text-base">
+            <p className="hidden font-semibold text-sm text-white sm:block sm:text-base">
               {contactInfo.email.value}
             </p>
           </div>
@@ -55,20 +51,18 @@ export function FooterBottom() {
 
         {/* Find a Location */}
         <Link
-          href={contactInfo.location.href}
           className="group flex items-center gap-2 transition-colors hover:text-[#b3b9c4]"
+          href={contactInfo.location.href}
         >
           <div className="text-[#EB0A1E]">
             <LocationIcon size={20} />
           </div>
           <div>
-            <p className="text-sm text-[#99A1AF] sm:hidden">
+            <p className="text-[#99A1AF] text-sm sm:hidden">{contactInfo.location.label}</p>
+            <p className="hidden text-[#99A1AF] text-xs sm:block sm:text-sm">
               {contactInfo.location.label}
             </p>
-            <p className="hidden text-xs text-[#99A1AF] sm:block sm:text-sm">
-              {contactInfo.location.label}
-            </p>
-            <p className="hidden text-sm font-semibold text-white sm:block sm:text-base">
+            <p className="hidden font-semibold text-sm text-white sm:block sm:text-base">
               {contactInfo.location.value}
             </p>
           </div>
@@ -76,12 +70,10 @@ export function FooterBottom() {
       </div>
 
       {/* Copyright and Project Info */}
-      <div className="flex flex-col gap-2 border-t border-[#333333] pt-6 text-xs text-[#99A1AF] sm:flex-row sm:items-center sm:justify-between sm:text-sm">
+      <div className="flex flex-col gap-2 border-[#333333] border-t pt-6 text-[#99A1AF] text-xs sm:flex-row sm:items-center sm:justify-between sm:text-sm">
         <p>&copy; 2026 Toyota Financial Services. All rights reserved.</p>
-        <p className="text-[#7a8291]">
-          Project ARROW (331) &bull; R1 Launch: March 31, 2026
-        </p>
+        <p className="text-[#7a8291]">Project ARROW (331) &bull; R1 Launch: March 31, 2026</p>
       </div>
     </div>
-  );
+  )
 }

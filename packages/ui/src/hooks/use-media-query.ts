@@ -1,7 +1,6 @@
 'use client'
 
-import * as React from 'react'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 /**
  * Custom hook for media queries
@@ -13,7 +12,7 @@ export function useMediaQuery(query: string): boolean {
 
   useEffect(() => {
     const media = window.matchMedia(query)
-    
+
     // Set initial value
     if (media.matches !== matches) {
       setMatches(media.matches)
@@ -30,10 +29,9 @@ export function useMediaQuery(query: string): boolean {
       return () => media.removeEventListener('change', listener)
     }
     // Legacy browsers
-    else {
-      media.addListener(listener)
-      return () => media.removeListener(listener)
-    }
+
+    media.addListener(listener)
+    return () => media.removeListener(listener)
   }, [matches, query])
 
   return matches

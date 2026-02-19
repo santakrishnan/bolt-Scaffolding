@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@tfs-ucmp/ui",
   "version": "1.0.0",
   "description": "Shared React components for Arrow monorepo",
   "main": "./src/index.ts",

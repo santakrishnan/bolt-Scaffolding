@@ -1,304 +1,175 @@
-# Contributing to Arrow E-Commerce
+# Contributing to Arrow E-commerce
 
-Thank you for your interest in contributing! This guide will help you get started.
+First off, thank you for considering contributing to Arrow E-commerce! It's people like you that make this project great.
 
-## 🏗️ Development Setup
+## Code of Conduct
 
-### Prerequisites
+This project and everyone participating in it is expected to uphold professional behavior. By participating, you are expected to maintain a respectful and collaborative environment.
 
-- Node.js >= 20.0.0
-- PNPM >= 9.0.0
-- Git
+## How Can I Contribute?
 
-### Getting Started
+### Reporting Bugs
 
-1. **Fork and Clone**
+Before creating bug reports, please check existing issues. When you create a bug report, include as many details as possible:
+
+**Great Bug Reports** include:
+- A quick summary and/or background
+- Steps to reproduce (be specific!)
+- What you expected would happen
+- What actually happens
+- Notes (possibly including why you think this might be happening)
+
+### Suggesting Enhancements
+
+Enhancement suggestions are tracked as GitHub issues. When creating an enhancement suggestion, include:
+- A clear and descriptive title
+- A detailed description of the proposed enhancement
+- Explain why this enhancement would be useful
+
+### Pull Requests
+
+1. **Fork the repo** and create your branch from `main`
+2. **Write clear code** that follows the project's style guide
+3. **Test your changes** - ensure all tests pass
+4. **Update documentation** if needed
+5. **Write a clear commit message** using conventional commits
+
+## Development Process
+
+### Setup
 
 ```bash
+# Clone your fork
 git clone https://github.com/your-username/arrow-ecommerce.git
-cd arrow-ecommerce
-```
 
-2. **Install Dependencies**
-
-```bash
+# Install dependencies
 pnpm install
-```
 
-3. **Create a Branch**
-
-```bash
-git checkout -b feature/your-feature-name
-```
-
-4. **Start Development**
-
-```bash
+# Start development server
 pnpm dev
 ```
 
-## 📁 Project Structure
+### Workflow
 
-- `apps/web` - Next.js application
-- `packages/ui` - Shared UI components
-- `packages/utils` - Shared utilities
-- `packages/ui-theme` - Design system
-- `packages/config` - Shared configurations
-
-## 🛠️ Development Workflow
-
-### Making Changes
-
-1. **Code Style**: We use Biome for linting and formatting
+1. Create a feature branch:
    ```bash
-   pnpm lint      # Check for issues
-   pnpm check     # Auto-fix issues
-   pnpm format    # Format code
+   git checkout -b feature/your-feature-name
    ```
 
-2. **Type Checking**: Ensure TypeScript types are correct
+2. Make your changes and commit:
    ```bash
-   pnpm type-check
+   git commit -m "feat: add amazing feature"
    ```
 
-3. **Testing**: Write tests for new features
+3. Push to your fork:
    ```bash
-   pnpm test
+   git push origin feature/your-feature-name
    ```
 
-### Adding New Components
+4. Open a Pull Request
 
-#### UI Components (shadcn/ui)
+### Commit Convention
 
-To add official shadcn/ui components:
+We use [Conventional Commits](https://www.conventionalcommits.org/):
 
-```bash
-cd packages/ui
-pnpx shadcn@latest add button
-```
-
-#### Custom Components
-
-1. Create component in `packages/ui/src/components/`
-2. Export in `packages/ui/src/index.ts`
-3. Document props with TypeScript
-4. Add usage example in comments
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation changes
+- `style:` - Code style changes (formatting, etc.)
+- `refactor:` - Code refactoring
+- `test:` - Adding or updating tests
+- `chore:` - Maintenance tasks
 
 Example:
-
-```tsx
-// packages/ui/src/components/my-component.tsx
-import * as React from "react";
-import { cn } from "../lib/utils";
-
-interface MyComponentProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: "default" | "primary";
-}
-
-/**
- * MyComponent - Description
- * 
- * @example
- * <MyComponent variant="primary">Content</MyComponent>
- */
-export const MyComponent = React.forwardRef<HTMLDivElement, MyComponentProps>(
-  ({ className, variant = "default", ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn("base-styles", className)}
-        {...props}
-      />
-    );
-  }
-);
-MyComponent.displayName = "MyComponent";
-```
-
-### Adding Utilities
-
-Add utilities to `packages/utils/src/`:
-
-```typescript
-// packages/utils/src/my-utility.ts
-export function myUtility(input: string): string {
-  return input.toUpperCase();
-}
-```
-
-Export in `packages/utils/src/index.ts`:
-
-```typescript
-export * from "./my-utility";
-```
-
-## 🎨 Styling Guidelines
-
-### Tailwind CSS 4
-
-- Use utility classes for styling
-- Define custom properties in `packages/ui-theme/index.css`
-- Follow the existing color scheme
-- Use semantic color tokens (e.g., `bg-primary`, not `bg-blue-500`)
-
-### Component Variants
-
-Use `class-variance-authority` (CVA) for component variants:
-
-```tsx
-import { cva } from "class-variance-authority";
-
-const variants = cva("base-classes", {
-  variants: {
-    size: {
-      sm: "text-sm",
-      md: "text-base",
-      lg: "text-lg",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-  },
-});
-```
-
-## 📝 Commit Guidelines
-
-### Commit Message Format
-
-Follow conventional commits:
-
-```
-type(scope): subject
-
-body (optional)
-
-footer (optional)
-```
-
-**Types:**
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting)
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
-
-**Examples:**
-
 ```bash
-git commit -m "feat(ui): add dropdown component"
-git commit -m "fix(web): resolve navigation issue on mobile"
+git commit -m "feat: add user authentication"
+git commit -m "fix: resolve navbar overflow on mobile"
 git commit -m "docs: update installation instructions"
 ```
 
-## 🧪 Testing
+## Coding Standards
 
-### Writing Tests
+### TypeScript
 
-Create test files alongside source files:
+- Use TypeScript for all new code
+- Enable strict mode
+- Properly type all functions and variables
+- Avoid `any` types
+
+### Code Style
+
+- Run `pnpm check` before committing
+- Run `pnpm fix` to auto-format
+- Follow Biome configuration
+- Use meaningful variable and function names
+
+### Testing
+
+- Write tests for new features
+- Maintain or improve test coverage
+- Run `pnpm test` before submitting PR
+- Use React Testing Library for component tests
+
+### Naming Conventions
+
+- **Components**: PascalCase (`UserProfile.tsx`)
+- **Utilities**: camelCase (`formatDate.ts`)
+- **Constants**: UPPER_SNAKE_CASE (`API_BASE_URL`)
+- **Files/Folders**: kebab-case (`user-settings/`)
+
+## Project Structure
 
 ```
-src/
-  utils.ts
-  utils.test.ts
+arrow-ecommerce/
+├── apps/
+│   └── web/          # Next.js application
+├── packages/
+│   ├── ui/           # Shared UI components
+│   ├── ui-theme/     # Design system theme
+│   ├── utils/        # Shared utilities
+│   └── config/       # Shared configurations
 ```
 
-Example test:
+## Adding Dependencies
 
-```typescript
-import { describe, it, expect } from "vitest";
-import { formatCurrency } from "./formatters";
+- Use `pnpm add` in the appropriate package
+- Justify new dependencies in your PR
+- Keep dependencies up to date
+- Prefer workspace dependencies for internal packages
 
-describe("formatCurrency", () => {
-  it("formats USD correctly", () => {
-    expect(formatCurrency(1000)).toBe("$1,000.00");
-  });
+## Pull Request Process
 
-  it("handles different currencies", () => {
-    expect(formatCurrency(1000, "EUR")).toBe("€1,000.00");
-  });
-});
-```
+1. **Update documentation** for any changed functionality
+2. **Add tests** for new features
+3. **Run all quality checks**:
+   ```bash
+   pnpm test
+   pnpm type-check
+   pnpm check
+   pnpm build
+   ```
+4. **Link any related issues** in your PR description
+5. **Wait for review** from maintainers
+6. **Address review feedback** promptly
 
-Run tests:
+## Review Process
 
-```bash
-pnpm test
-```
+- PRs require at least one approval
+- Automated checks must pass (CI, tests, linting)
+- Maintainers may request changes
+- Be patient and respectful during review
 
-## 🔍 Code Review Process
+## Getting Help
 
-### Before Submitting
+- 💬 **Questions?** Open a GitHub Discussion
+- 🐛 **Found a bug?** Create an issue
+- 💡 **Have an idea?** Start a discussion first
 
-1. ✅ Code follows project style (Biome passes)
-2. ✅ TypeScript types are correct
-3. ✅ Tests pass (if applicable)
-4. ✅ Documentation is updated
-5. ✅ Commit messages follow convention
-6. ✅ No console logs or debug code
+## Recognition
 
-### Pull Request Template
-
-```markdown
-## Description
-Brief description of changes
-
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Breaking change
-- [ ] Documentation update
-
-## Testing
-How to test the changes
-
-## Screenshots (if applicable)
-Add screenshots here
-
-## Checklist
-- [ ] Code follows style guidelines
-- [ ] Self-review completed
-- [ ] Tests added/updated
-- [ ] Documentation updated
-```
-
-## 🐛 Reporting Issues
-
-### Bug Reports
-
-Include:
-- Clear title
-- Steps to reproduce
-- Expected vs actual behavior
-- Environment (OS, Node version, browser)
-- Screenshots or error messages
-
-### Feature Requests
-
-Include:
-- Clear description
-- Use case
-- Proposed solution
-- Alternative solutions considered
-
-## 📚 Resources
-
-- [Next.js Docs](https://nextjs.org/docs)
-- [Turborepo Docs](https://turbo.build/repo/docs)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [shadcn/ui Docs](https://ui.shadcn.com)
-- [Biome Docs](https://biomejs.dev)
-
-## 💬 Getting Help
-
-- Open a GitHub Discussion
-- Check existing issues
-- Read the documentation
-
-## 📄 License
-
-By contributing, you agree that your contributions will be licensed under the MIT License.
+Contributors will be recognized in:
+- The project README
+- Release notes
+- GitHub contributors page
 
 Thank you for contributing! 🎉

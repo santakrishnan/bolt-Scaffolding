@@ -1,3 +1,20 @@
-/* Arrow UI Theme - Main Entry */
+/*
+  UI Theme Package - Base Only
+
+  This is the base theme with no brand-specific assumptions.
+  Apps should explicitly import the theme they want to use.
+
+  Usage in apps:
+
+  Option 1: Base theme only (no shadcn)
+    @import "@tfs-ucmp/ui-theme";
+
+  Option 2: Base + Arrow theme (with shadcn)
+    @import "@tfs-ucmp/ui-theme";
+    @import "@tfs-ucmp/ui-theme/themes/arrow";
+
+  Option 3: Base + Acme theme
+    @import "@tfs-ucmp/ui-theme";
+    @import "@tfs-ucmp/ui-theme/themes/acme";
+*/
 @import "./base/index.css";
-@import "./themes/arrow/index.css";

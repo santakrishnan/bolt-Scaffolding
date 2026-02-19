@@ -1,77 +1,6 @@
-/* Base Tailwind & Design Tokens */
+/* Base Theme */
 @import "tailwindcss";
-
-@theme {
-  /* Colors - Design Tokens */
-  --color-background: #ffffff;
-  --color-foreground: #09090b;
-  --color-card: #ffffff;
-  --color-card-foreground: #09090b;
-  --color-popover: #ffffff;
-  --color-popover-foreground: #09090b;
-  --color-primary: #18181b;
-  --color-primary-foreground: #fafafa;
-  --color-secondary: #f4f4f5;
-  --color-secondary-foreground: #18181b;
-  --color-muted: #f4f4f5;
-  --color-muted-foreground: #71717a;
-  --color-accent: #f4f4f5;
-  --color-accent-foreground: #18181b;
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #fafafa;
-  --color-border: #e4e4e7;
-  --color-input: #e4e4e7;
-  --color-ring: #18181b;
-
-  /* Spacing Scale */
-  --spacing-0: 0px;
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-5: 1.25rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  --spacing-10: 2.5rem;
-  --spacing-12: 3rem;
-  --spacing-16: 4rem;
-
-  /* Border Radius */
-  --radius-sm: 0.125rem;
-  --radius-base: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-full: 9999px;
-
-  /* Typography */
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, monospace;
-  
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-
-  --line-height-tight: 1.25;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.75;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-  /* Animation */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+@import "./tokens/index.css";
 
 /* Dark Mode Tokens */
 @media (prefers-color-scheme: dark) {
@@ -105,5 +34,5 @@
 
 body {
   @apply bg-background text-foreground;
-  font-family: var(--font-sans);
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
 }

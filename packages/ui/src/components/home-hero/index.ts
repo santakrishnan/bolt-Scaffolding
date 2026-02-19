@@ -1,5 +1,0 @@
-export { HomeHero } from './home-hero'
-export { HomeHeroCarousel, type CarouselSlide } from './home-hero-carousel'
-export { HomeHeroTitle } from './home-hero-title'
-export { HomeHeroSearch } from './home-hero-search'
-export { HomeHeroStats } from './home-hero-stats'

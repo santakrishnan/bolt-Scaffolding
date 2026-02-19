@@ -1,5 +1,5 @@
 {
-  "name": "@arrow/ui-theme",
+  "name": "@tfs-ucmp/ui-theme",
   "version": "1.0.0",
   "description": "CSS-only design tokens and themes for Arrow monorepo",
   "main": "./index.css",
