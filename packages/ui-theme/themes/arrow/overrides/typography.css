@@ -3,12 +3,7 @@
 /* Desktop Typography (Default) */
 @theme {
   /* Font Family - Toyota Type (loaded by app via next/font) */
-  --font-family-sans: var(
-    --font-toyota-type,
-    ui-sans-serif,
-    system-ui,
-    sans-serif
-  );
+  --font-family-sans: var(--font-toyota-type, ui-sans-serif, system-ui, sans-serif);
 
   /* Font Size Scale - Desktop */
   --font-size-2xs: 10px;

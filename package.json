@@ -31,7 +31,7 @@
     "test": "turbo test",
     "test:watch": "turbo test:watch",
     "test:ui": "turbo test:ui",
-    "clean": "turbo clean && rimraf node_modules .turbo",
+    "clean": "turbo clean && rm -rf node_modules .turbo",
     "prepare": "husky",
     "ui:add": "cd packages/ui && npx shadcn@latest add",
     "turbo:login": "turbo login",

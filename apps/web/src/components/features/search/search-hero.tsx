@@ -63,10 +63,10 @@ export function SearchHero({
         className={`bg-gray-100 px-4 pt-12 pb-6 sm:px-6 lg:px-8 ${showSuggestions ? 'relative z-40' : ''}`}
       >
         <div className="container mx-auto max-w-7xl">
-          <div className='flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between'>
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             {/* Title */}
             <div>
-              <h1 className='mb-1 font-bold text-3xl text-black sm:text-4xl'>FIND YOUR NEXT CAR</h1>
+              <h1 className="mb-1 font-bold text-3xl text-black sm:text-4xl">FIND YOUR NEXT CAR</h1>
               <p className="text-gray-500 text-sm">1,784,503 Vehicles Available</p>
             </div>
 
@@ -80,9 +80,9 @@ export function SearchHero({
                   }`}
                 >
                   <div className="flex items-center px-4 py-3">
-                    <SparkleIcon className='mr-2 flex-shrink-0 text-red-500' />
+                    <SparkleIcon className="mr-2 flex-shrink-0 text-red-500" />
                     <input
-                      className='flex-1 bg-transparent text-gray-700 outline-none'
+                      className="flex-1 bg-transparent text-gray-700 outline-none"
                       onChange={(e) => onSearchChange(e.target.value)}
                       onFocus={openSuggestions}
                       onKeyDown={(e) => {
@@ -95,9 +95,9 @@ export function SearchHero({
                       type="text"
                       value={searchQuery}
                     />
-                    <MicIcon className='mx-2 cursor-pointer text-gray-400 hover:text-gray-600' />
+                    <MicIcon className="mx-2 cursor-pointer text-gray-400 hover:text-gray-600" />
                     <button
-                      className='rounded-full bg-red-500 px-6 py-2 font-medium text-white transition-colors hover:bg-red-600'
+                      className="rounded-full bg-red-500 px-6 py-2 font-medium text-white transition-colors hover:bg-red-600"
                       onClick={() => {
                         closeSuggestions()
                         onSearch()
@@ -117,7 +117,7 @@ export function SearchHero({
                         : 'translate-y-0 scale-y-100 opacity-100'
                     }`}
                   >
-                    <div className='border-gray-200 border-t' />
+                    <div className="border-gray-200 border-t" />
                     {searchSuggestions.map((suggestion, idx) => (
                       <button
                         className={`flex w-full items-center gap-2 border-gray-100 border-b px-4 py-3 text-left transition-opacity duration-500 last:border-b-0 hover:bg-gray-50 ${
@@ -140,10 +140,10 @@ export function SearchHero({
               </div>
 
               {/* Quick Filter Pills */}
-              <div className='mt-4 flex flex-wrap justify-end gap-2'>
+              <div className="mt-4 flex flex-wrap justify-end gap-2">
                 {quickFilters.map((pill) => (
                   <button
-                    className='rounded-full border border-gray-300 bg-white px-3 py-1.5 text-sm transition-colors hover:bg-gray-50'
+                    className="rounded-full border border-gray-300 bg-white px-3 py-1.5 text-sm transition-colors hover:bg-gray-50"
                     key={pill}
                   >
                     {pill}

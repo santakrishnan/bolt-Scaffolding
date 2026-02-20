@@ -141,5 +141,5 @@ export function HomeHeroSearch() {
         </Button>
       </div>
     </form>
-  );
+  )
 }

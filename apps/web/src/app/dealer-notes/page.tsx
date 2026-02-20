@@ -1,6 +1,6 @@
-"use client";
+'use client'
 
-import { DealerNotesSection } from "../../components/features/vdp/dealer-notes-section";
+import { DealerNotesSection } from '../../components/features/vdp/dealer-notes-section'
 
 export default function DealerNotesPage() {
   return (
@@ -8,13 +8,13 @@ export default function DealerNotesPage() {
       <main className="min-h-screen bg-background">
         <DealerNotesSection
           onReviewsClick={() => {
-            console.log("Reviews clicked");
+            console.log('Reviews clicked')
           }}
           onTestDriveClick={() => {
-            console.log("Test drive clicked");
+            console.log('Test drive clicked')
           }}
         />
       </main>
     </div>
-  );
+  )
 }

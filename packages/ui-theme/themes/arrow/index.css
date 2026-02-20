@@ -1,12 +1,15 @@
 /* Arrow Theme */
 
+/* Import base theme - includes Tailwind and tokens */
+@import "../../base/index.css";
+
 /* Brand overrides */
 @import "./overrides/index.css";
 
-/* Light mode (default) */
+/* Light mode (default) - includes @layer base */
 @import "./light.css";
 
-/* Dark mode */
+/* Dark mode - includes @layer base */
 @import "./dark.css";
 
 /*

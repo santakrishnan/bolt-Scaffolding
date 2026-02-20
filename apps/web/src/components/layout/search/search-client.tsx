@@ -245,7 +245,7 @@ export function SearchClient({ vehicles }: SearchClientProps) {
   }
 
   return (
-    <div className='flex min-h-screen flex-col bg-gray-50'>
+    <div className="flex min-h-screen flex-col bg-gray-50">
       <FilterSidebar
         filterState={filterState}
         isOpen={isFilterOpen}
@@ -255,7 +255,7 @@ export function SearchClient({ vehicles }: SearchClientProps) {
         vehicleCount={vehicleCount}
       />
 
-      <main className='relative flex-1'>
+      <main className="relative flex-1">
         <SearchHero
           onSearch={() => setCurrentPage(1)}
           onSearchChange={setSearchQuery}

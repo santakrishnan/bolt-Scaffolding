@@ -1,3 +1,3 @@
-export { SearchClient } from './search-client';
-export { SearchWrapper } from './search-wrapper';
-export type { SearchPageData, Vehicle, FilterSections } from '@/lib/search/data';
+export type { FilterSections, SearchPageData, Vehicle } from '@/lib/search/data'
+export { SearchClient } from './search-client'
+export { SearchWrapper } from './search-wrapper'

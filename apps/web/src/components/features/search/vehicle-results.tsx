@@ -54,20 +54,20 @@ export function VehicleResults({
   const paginatedVehicles = filteredVehicles.slice(startIndex, startIndex + itemsPerPage)
 
   return (
-    <section className='px-4 py-6 sm:px-6 lg:px-8'>
+    <section className="px-4 py-6 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         {/* Initial State - No Filters Applied */}
         {activeFilterCount === 0 && (
-          <div className='mb-6 flex items-center gap-3'>
+          <div className="mb-6 flex items-center gap-3">
             <button
-              className='inline-flex items-center gap-2 rounded-full bg-gray-200 px-4 py-2.5 font-medium text-gray-700 transition-colors hover:bg-gray-300'
+              className="inline-flex items-center gap-2 rounded-full bg-gray-200 px-4 py-2.5 font-medium text-gray-700 transition-colors hover:bg-gray-300"
               onClick={onToggleFilter}
             >
-              <FilterLinesIcon className='h-5 w-5' />
+              <FilterLinesIcon className="h-5 w-5" />
               <span>Filter and Sort</span>
             </button>
             <button
-              className='rounded-full bg-gray-200 px-4 py-2.5 font-medium text-gray-700 transition-colors hover:bg-gray-300'
+              className="rounded-full bg-gray-200 px-4 py-2.5 font-medium text-gray-700 transition-colors hover:bg-gray-300"
               onClick={onReset}
             >
               Reset
@@ -77,23 +77,23 @@ export function VehicleResults({
 
         {/* After Filters Applied - Vehicle Count + Sort + Filter Tags */}
         {activeFilterCount > 0 && (
-          <div className='mb-6 flex items-start gap-6 border-gray-200 border-b pb-4'>
+          <div className="mb-6 flex items-start gap-6 border-gray-200 border-b pb-4">
             {/* Left: Vehicle Count & Sort */}
-            <div className='flex flex-shrink-0 items-center gap-3'>
+            <div className="flex flex-shrink-0 items-center gap-3">
               <button
-                className='flex h-10 w-10 items-center justify-center rounded-full bg-red-500 transition-colors hover:bg-red-600'
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500 transition-colors hover:bg-red-600"
                 onClick={onToggleFilter}
               >
-                <FilterLinesIcon className='h-5 w-5 text-white' />
+                <FilterLinesIcon className="h-5 w-5 text-white" />
               </button>
               <div>
-                <div className='font-semibold text-black text-lg'>
+                <div className="font-semibold text-black text-lg">
                   {vehicleCount} vehicles found
                 </div>
-                <div className='text-gray-600 text-sm'>
+                <div className="text-gray-600 text-sm">
                   Sort by:{' '}
-                  <button className='inline-flex items-center gap-1 font-medium text-black hover:underline'>
-                    Recommended <ChevronDownIcon className='h-3 w-3' />
+                  <button className="inline-flex items-center gap-1 font-medium text-black hover:underline">
+                    Recommended <ChevronDownIcon className="h-3 w-3" />
                   </button>
                 </div>
               </div>
@@ -104,20 +104,20 @@ export function VehicleResults({
               <div className="flex flex-wrap items-center justify-end gap-2">
                 {activeFilters.map((filter, idx) => (
                   <span
-                    className='inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-gray-300 bg-white px-3 py-1 text-black text-xs'
+                    className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-gray-300 bg-white px-3 py-1 text-black text-xs"
                     key={`${filter.type}-${filter.value}-${idx}`}
                   >
                     {filter.label}
                     <button
-                      className='text-black transition-colors hover:text-red-500'
+                      className="text-black transition-colors hover:text-red-500"
                       onClick={() => onRemoveFilter(filter.type, filter.value)}
                     >
-                      <XIcon className='h-3 w-3' />
+                      <XIcon className="h-3 w-3" />
                     </button>
                   </span>
                 ))}
                 <button
-                  className='whitespace-nowrap rounded-full bg-gray-900 px-3 py-1 text-white text-xs transition-colors hover:bg-black'
+                  className="whitespace-nowrap rounded-full bg-gray-900 px-3 py-1 text-white text-xs transition-colors hover:bg-black"
                   onClick={onReset}
                 >
                   Reset
@@ -128,7 +128,7 @@ export function VehicleResults({
         )}
 
         {/* Vehicle Grid */}
-        <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {paginatedVehicles.map((vehicle) => (
             <CarCard key={vehicle.id} {...vehicle} />
           ))}
@@ -136,9 +136,9 @@ export function VehicleResults({
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className='mt-10 flex items-center justify-center gap-2'>
+          <div className="mt-10 flex items-center justify-center gap-2">
             <button
-              className='rounded-full border border-gray-300 px-4 py-2 text-gray-700 transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50'
+              className="rounded-full border border-gray-300 px-4 py-2 text-gray-700 transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50"
               disabled={currentPage === 1}
               onClick={() => onPageChange(currentPage - 1)}
             >
@@ -162,7 +162,7 @@ export function VehicleResults({
             </div>
 
             <button
-              className='rounded-full border border-gray-300 px-4 py-2 text-gray-700 transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50'
+              className="rounded-full border border-gray-300 px-4 py-2 text-gray-700 transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50"
               disabled={currentPage === totalPages}
               onClick={() => onPageChange(currentPage + 1)}
             >
@@ -173,7 +173,7 @@ export function VehicleResults({
 
         {/* Page Info */}
         {filteredVehicles.length > 0 && (
-          <div className='mt-4 text-center text-gray-500 text-sm'>
+          <div className="mt-4 text-center text-gray-500 text-sm">
             Showing {startIndex + 1}-{Math.min(startIndex + itemsPerPage, filteredVehicles.length)}{' '}
             of {filteredVehicles.length} vehicles
           </div>
@@ -181,9 +181,9 @@ export function VehicleResults({
 
         {/* No Results */}
         {filteredVehicles.length === 0 && (
-          <div className='py-12 text-center'>
+          <div className="py-12 text-center">
             <p className="text-gray-500 text-lg">No vehicles found for "{searchQuery}"</p>
-            <p className='mt-2 text-gray-400 text-sm'>Try adjusting your search terms</p>
+            <p className="mt-2 text-gray-400 text-sm">Try adjusting your search terms</p>
           </div>
         )}
       </div>

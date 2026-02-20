@@ -3,29 +3,41 @@
  * Exports all icon components for use throughout the application
  */
 
-export { FacebookIcon, TwitterIcon, InstagramIcon, YouTubeIcon } from './social-icons';
-export { PhoneIcon, EmailIcon, LocationIcon } from './contact-icons';
-export { ArrowCircleIcon, CertifiedDocumentIcon, VerifiedBadgeIcon, GuaranteeIcon } from './quality-icons';
-export { HeartIcon, UserIcon, MapPinIcon, MenuIcon } from './header-icons';
-export { PricetagIcon, DealsIcon, DownIcon, MeterIcon } from './advantages-icons';
-export { default as Background } from './background';
-export { FilterLinesIcon, XIcon, ChevronDownIcon, MinusIcon, MicIcon, SparkleIcon } from './search-page-icon';
-export { StarIcon } from './rating-icons';
+export { DealsIcon, DownIcon, MeterIcon, PricetagIcon } from './advantages-icons'
+export { default as Background } from './background'
+export { EmailIcon, LocationIcon, PhoneIcon } from './contact-icons'
+export { HeartIcon, MapPinIcon, MenuIcon, UserIcon } from './header-icons'
+export {
+  ArrowCircleIcon,
+  CertifiedDocumentIcon,
+  GuaranteeIcon,
+  VerifiedBadgeIcon,
+} from './quality-icons'
+export { StarIcon } from './rating-icons'
+export {
+  ChevronDownIcon,
+  FilterLinesIcon,
+  MicIcon,
+  MinusIcon,
+  SparkleIcon,
+  XIcon,
+} from './search-page-icon'
+export { FacebookIcon, InstagramIcon, TwitterIcon, YouTubeIcon } from './social-icons'
 export {
   BatteryIcon,
-  EngineIcon,
-  MPGIcon,
-  TransmissionIcon,
-  OdometerIcon,
-  DamageReportIcon,
-  PreviousOwnersIcon,
-  ServiceHistoryIcon,
-  MileageIcon,
   ColorsIcon,
+  DamageReportIcon,
+  EngineIcon,
   FrameIcon,
   MarkerPinIcon,
+  MileageIcon,
+  MPGIcon,
+  NoDamageIcon,
+  OdometerIcon,
+  PreviousOwnersIcon,
+  ServiceHistoryIcon,
+  TransmissionIcon,
   TypeOwnersIcon,
   VectorRightIcon,
   VectorRightOutlineIcon,
-  NoDamageIcon,
-} from './vehicle-icons';
+} from './vehicle-icons'

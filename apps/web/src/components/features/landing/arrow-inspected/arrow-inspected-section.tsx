@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import { Carousel, CarouselContent, CarouselItem } from "@tfs-ucmp/ui";
-import Autoplay from "embla-carousel-autoplay";
-import { inspectionFeatures } from "../../../../data/inspection/features";
-import { InspectionFeatureCard } from "./inspection-feature-card";
+import { Carousel, CarouselContent, CarouselItem } from '@tfs-ucmp/ui'
+import Autoplay from 'embla-carousel-autoplay'
+import { inspectionFeatures } from '../../../../data/inspection/features'
+import { InspectionFeatureCard } from './inspection-feature-card'
 
 export function ArrowInspectedSection() {
   return (
@@ -14,9 +14,8 @@ export function ArrowInspectedSection() {
           <h2 className="font-bold text-2xl leading-tight tracking-tight sm:text-3xl lg:text-4xl">
             Arrow Inspected®
           </h2>
-          <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Every Vehicle Is Backed By Toyota&apos;s Commitment To Quality And
-            Transparency
+          <p className="text-base text-muted-foreground leading-relaxed sm:text-lg">
+            Every Vehicle Is Backed By Toyota&apos;s Commitment To Quality And Transparency
           </p>
         </div>
 
@@ -25,17 +24,17 @@ export function ArrowInspectedSection() {
           <div className="pl-4 sm:pl-6 lg:pl-8">
             <Carousel
               opts={{
-                align: "start",
-                loop: true
+                align: 'start',
+                loop: true,
               }}
               plugins={[
                 Autoplay({
-                  delay: 3000
-                })
+                  delay: 3000,
+                }),
               ]}
             >
               <CarouselContent>
-                {inspectionFeatures.map(feature => (
+                {inspectionFeatures.map((feature) => (
                   <CarouselItem className="basis-[70%]" key={feature.id}>
                     <InspectionFeatureCard feature={feature} />
                   </CarouselItem>
@@ -47,11 +46,11 @@ export function ArrowInspectedSection() {
 
         {/* Desktop Grid */}
         <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-4">
-          {inspectionFeatures.map(feature => (
+          {inspectionFeatures.map((feature) => (
             <InspectionFeatureCard feature={feature} key={feature.id} />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

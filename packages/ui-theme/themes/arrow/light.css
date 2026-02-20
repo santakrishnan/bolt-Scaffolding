@@ -1,4 +1,40 @@
 /* Arrow Light Mode - From Design Tokens */
+
+@layer base {
+  :root {
+    /* shadcn color variables in HSL format */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 354 91% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 54%;
+
+    --accent: 36 25% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 354 91% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0% / 0.1;
+    --input: 0 0% 0% / 0.1;
+    --ring: 354 91% 48%;
+
+    --radius: 0.5rem;
+  }
+}
+
 @theme {
   /* Base: White background with Neutral 950 text */
   --color-background: #ffffff;
@@ -38,4 +74,10 @@
 
   /* Ring: Blue 500 */
   --color-ring: #0066cc;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
 }
