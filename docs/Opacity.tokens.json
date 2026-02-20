@@ -4,9 +4,7 @@
     "$value": 5,
     "$extensions": {
       "com.figma.variableId": "VariableID:2847:4255",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
+      "com.figma.scopes": ["ALL_SCOPES"],
       "com.figma.isOverride": true
     }
   },
@@ -15,9 +13,7 @@
     "$value": 10,
     "$extensions": {
       "com.figma.variableId": "VariableID:2847:4256",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
+      "com.figma.scopes": ["ALL_SCOPES"],
       "com.figma.isOverride": true
     }
   },
@@ -26,9 +22,7 @@
     "$value": 20,
     "$extensions": {
       "com.figma.variableId": "VariableID:2847:4257",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
+      "com.figma.scopes": ["ALL_SCOPES"],
       "com.figma.isOverride": true
     }
   },

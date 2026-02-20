@@ -24,8 +24,11 @@ import {
   VectorRightOutlineIcon,
 } from '@tfs-ucmp/ui'
 import { ExternalLink, Eye } from 'lucide-react'
+
 <<<<<<< Updated upstream
+
 import Image from 'next/image'
+
 =======
 >>>>>>> Stashed changes
 

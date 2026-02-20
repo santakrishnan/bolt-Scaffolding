@@ -154,8 +154,7 @@ export function DealerInfoCard({
               >
                 {[...new Array(5)].map((_, index) => {
 =======
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, index) => {
+              <div className="flex gap-0.5">[...Array(5)].map((_, index) => {
 >>>>>>> Stashed changes
                   const fillPercentage = Math.min(Math.max(dealer.rating - index, 0), 1) * 100
                   return (
@@ -195,11 +194,9 @@ export function DealerInfoCard({
                       </div>
                     </div>
                   )
-                })}
+                })
               </div>
             </div>
-
-            {/* Action Buttons */}
             <div className="flex w-full flex-col gap-2 pt-4 lg:pt-[32px]">
               <Button
                 className="w-full rounded-full bg-black text-white hover:bg-gray-800"

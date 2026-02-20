@@ -2,7 +2,6 @@
   "recommendations": [
     "biomejs.biome",
     "bradlc.vscode-tailwindcss",
-    "dbaeumer.vscode-eslint",
     "ms-vscode.vscode-typescript-next",
     "usernamehw.errorlens",
     "christian-kohler.path-intellisense",

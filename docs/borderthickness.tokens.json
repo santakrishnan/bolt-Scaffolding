@@ -4,9 +4,7 @@
     "$value": 1,
     "$extensions": {
       "com.figma.variableId": "VariableID:2847:4252",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
+      "com.figma.scopes": ["ALL_SCOPES"],
       "com.figma.isOverride": true
     }
   },
@@ -15,9 +13,7 @@
     "$value": 2,
     "$extensions": {
       "com.figma.variableId": "VariableID:2847:4253",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
+      "com.figma.scopes": ["ALL_SCOPES"],
       "com.figma.isOverride": true
     }
   },

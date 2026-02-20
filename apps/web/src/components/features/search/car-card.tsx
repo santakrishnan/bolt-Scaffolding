@@ -41,9 +41,9 @@ export const CarCard: React.FC<CarCardProps> = ({
     }
   }
   return (
-    <div className='relative flex min-h-[340px] w-full max-w-xs flex-col rounded-lg border border-gray-200 bg-white shadow-lg sm:max-w-sm md:min-h-[380px] md:max-w-md'>
+    <div className="relative flex min-h-[340px] w-full max-w-xs flex-col rounded-lg border border-gray-200 bg-white shadow-lg sm:max-w-sm md:min-h-[380px] md:max-w-md">
       {/* Price badges */}
-      <div className='absolute top-4 left-4 z-10 flex flex-col gap-2'>
+      <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
         {labels.map((label, idx) => (
           <span
             className={`rounded px-2 py-1 font-semibold text-xs ${getBadgeColor(label)}`}
@@ -54,7 +54,7 @@ export const CarCard: React.FC<CarCardProps> = ({
         ))}
       </div>
       {/* Heart and Share icons */}
-      <div className='absolute top-4 right-4 flex gap-2'>
+      <div className="absolute top-4 right-4 flex gap-2">
         <button aria-label="Share" className="text-gray-400">
           {/* TODO: Replace with Share icon from UI when available */}
           <svg
@@ -81,42 +81,42 @@ export const CarCard: React.FC<CarCardProps> = ({
           />
         </button>
       </div>
-      <div className='mt-6 mb-2 flex justify-center'>
+      <div className="mt-6 mb-2 flex justify-center">
         <img
           alt={title}
-          className='h-28 w-auto max-w-full object-contain sm:h-32 md:h-40'
+          className="h-28 w-auto max-w-full object-contain sm:h-32 md:h-40"
           src={image}
         />
       </div>
-      <div className='flex flex-col gap-y-1 p-4 sm:p-6 md:p-8'>
-        <div className='mb-1 flex flex-col items-start justify-between gap-1 sm:flex-row sm:items-center sm:gap-0'>
-          <div className='font-bold font-toyota text-[#111] text-[16px] leading-[1.3]'>{title}</div>
+      <div className="flex flex-col gap-y-1 p-4 sm:p-6 md:p-8">
+        <div className="mb-1 flex flex-col items-start justify-between gap-1 sm:flex-row sm:items-center sm:gap-0">
+          <div className="font-bold font-toyota text-[#111] text-[16px] leading-[1.3]">{title}</div>
           <div className="flex flex-col items-end">
             {oldPrice && (
-              <span className='text-gray-400 text-xs line-through'>
+              <span className="text-gray-400 text-xs line-through">
                 ${oldPrice.toLocaleString()}
               </span>
             )}
-            <span className='text-right font-semibold font-toyota text-[#EB0D1C] text-[20px] leading-normal'>
+            <span className="text-right font-semibold font-toyota text-[#EB0D1C] text-[20px] leading-normal">
               ${price.toLocaleString()}
             </span>
           </div>
         </div>
-        <div className='mb-2 flex flex-wrap items-center gap-2 text-gray-500 text-xs'>
-          <LocationIcon className='mr-1 inline h-4 w-4' />
+        <div className="mb-2 flex flex-wrap items-center gap-2 text-gray-500 text-xs">
+          <LocationIcon className="mr-1 inline h-4 w-4" />
           <span>{miles}</span>
           <span className="mx-1">|</span>
           <span>{odometer}</span>
         </div>
-        <div className='mb-2 flex flex-wrap items-center justify-between gap-2'>
-          <span className='rounded bg-black px-2 py-1 font-semibold text-white text-xs'>
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+          <span className="rounded bg-black px-2 py-1 font-semibold text-white text-xs">
             {match}% Match
           </span>
-          <a className='ml-auto text-gray-600 text-xs underline' href="#">
+          <a className="ml-auto text-gray-600 text-xs underline" href="#">
             Refine your search
           </a>
         </div>
-        <div className='mt-2 flex flex-wrap justify-between gap-2 border-t pt-2 text-gray-500 text-xs'>
+        <div className="mt-2 flex flex-wrap justify-between gap-2 border-t pt-2 text-gray-500 text-xs">
           <span>Warranty</span>
           <span>Inspected</span>
           <span>1 Owner</span>

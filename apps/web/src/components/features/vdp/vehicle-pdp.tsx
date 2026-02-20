@@ -2,10 +2,14 @@
 
 import { Button } from '@tfs-ucmp/ui'
 import { ChevronLeft, ChevronRight, MapPin } from 'lucide-react'
+
 <<<<<<< Updated upstream
+
 import Image from 'next/image'
+
 =======
 >>>>>>> Stashed changes
+
 import type React from 'react'
 import { useState } from 'react'
 
@@ -231,8 +235,8 @@ export const VehiclePDP: React.FC = () => {
                 }`}
                 key={idx}
                 onClick={() => setCurrentImageIndex(idx)}
-<<<<<<< Updated upstream
-                type="button"
+<<<<<<< Updated type="button"
+                upstream
               >
                 <Image
                   alt={`${vehicle.year} ${vehicle.make} ${vehicle.model} thumbnail ${idx + 1}`}

@@ -4,9 +4,7 @@
     "$value": "Toyota Type",
     "$extensions": {
       "com.figma.variableId": "VariableID:2640:18788",
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ],
+      "com.figma.scopes": ["ALL_SCOPES"],
       "com.figma.type": "string",
       "com.figma.isOverride": true
     }
@@ -17,9 +15,7 @@
       "$value": 10,
       "$extensions": {
         "com.figma.variableId": "VariableID:2703:1232",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:371072ac41e52a234db46f6b1a4255b742d8354d/-1:-1",
           "targetVariableName": "10",
@@ -34,9 +30,7 @@
       "$value": 12,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2433",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:64e22d3de5989a169f3d8dfa9f1aaa7588bb24b4/-1:-1",
           "targetVariableName": "12",
@@ -51,9 +45,7 @@
       "$value": 14,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2441",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:2f50d661fa75f7d5f7528260e2acf5d273824cc1/-1:-1",
           "targetVariableName": "14",
@@ -68,9 +60,7 @@
       "$value": 16,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2434",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:c9145927e229320c533c46f41c49a128a950a6dc/-1:-1",
           "targetVariableName": "16",
@@ -85,9 +75,7 @@
       "$value": 20,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2436",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:185aa8134725d3019f1509d9acde6f9fccdf5faf/-1:-1",
           "targetVariableName": "20",
@@ -102,9 +90,7 @@
       "$value": 24,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2437",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:0da46fa07edb2267e1ce19a5884954f7207467ad/-1:-1",
           "targetVariableName": "24",
@@ -119,9 +105,7 @@
       "$value": 32,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2438",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:d7791b26be6f0ece2703ff412095ff33c2234f28/-1:-1",
           "targetVariableName": "32",
@@ -136,9 +120,7 @@
       "$value": 36,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2439",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:32549ded1deeb7ebc1b1789c7f512c49b34c25ce/-1:-1",
           "targetVariableName": "36",
@@ -153,9 +135,7 @@
       "$value": 40,
       "$extensions": {
         "com.figma.variableId": "VariableID:2613:2440",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.aliasData": {
           "targetVariableId": "VariableID:8c40abb24adc2fbb9d9a742e47d18642eee02b3d/-1:-1",
           "targetVariableName": "40",
@@ -172,9 +152,7 @@
       "$value": "Light",
       "$extensions": {
         "com.figma.variableId": "VariableID:2640:18796",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.type": "string",
         "com.figma.isOverride": true
       }
@@ -184,9 +162,7 @@
       "$value": "Regular",
       "$extensions": {
         "com.figma.variableId": "VariableID:2640:18797",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.type": "string",
         "com.figma.isOverride": true
       }
@@ -196,9 +172,7 @@
       "$value": "Semibold",
       "$extensions": {
         "com.figma.variableId": "VariableID:2640:18799",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.type": "string",
         "com.figma.isOverride": true
       }
@@ -208,9 +182,7 @@
       "$value": "Bold",
       "$extensions": {
         "com.figma.variableId": "VariableID:2640:18800",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.type": "string",
         "com.figma.isOverride": true
       }
@@ -220,9 +192,7 @@
       "$value": "Black",
       "$extensions": {
         "com.figma.variableId": "VariableID:2640:18798",
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ],
+        "com.figma.scopes": ["ALL_SCOPES"],
         "com.figma.type": "string",
         "com.figma.isOverride": true
       }
