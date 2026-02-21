@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { Card, CardContent, cn } from '@tfs-ucmp/ui'
-import * as React from 'react'
+import { Card, CardContent, cn } from "@tfs-ucmp/ui";
+import { useRef, useState } from "react";
 
 // Step icons
 function RefreshIcon({ className }: { className?: string }) {
@@ -29,31 +29,31 @@ function RefreshIcon({ className }: { className?: string }) {
         mask="url(#path-1-outside-1_2335_4723)"
       />
     </svg>
-  )
+  );
 }
 
 function SearchIcon({ className }: { className?: string }) {
-  return <img alt="Search" className={className} src="/images/buying-process/SearchIcon.png" />
+  return <img alt="Search" className={className} src="/images/buying-process/SearchIcon.png" />;
 }
 
 function ShieldCheckIcon({ className }: { className?: string }) {
   return (
     <img alt="Shield Check" className={className} src="/images/buying-process/ShieldCheck.png" />
-  )
+  );
 }
 
 function ClipboardIcon({ className }: { className?: string }) {
-  return <img alt="Clipboard" className={className} src="/images/buying-process/ClipBoard.png" />
+  return <img alt="Clipboard" className={className} src="/images/buying-process/ClipBoard.png" />;
 }
 
 interface ProcessStep {
-  icon: 'refresh' | 'search' | 'shield' | 'clipboard'
-  title: string
-  description: string
+  icon: "refresh" | "search" | "shield" | "clipboard";
+  title: string;
+  description: string;
 }
 
 interface BuyingProcessCarouselProps {
-  steps: ProcessStep[]
+  steps: ProcessStep[];
 }
 
 const iconMap = {
@@ -61,38 +61,38 @@ const iconMap = {
   search: SearchIcon,
   shield: ShieldCheckIcon,
   clipboard: ClipboardIcon,
-}
+};
 
 export function BuyingProcessCarousel({ steps }: BuyingProcessCarouselProps) {
-  const [currentIndex, setCurrentIndex] = React.useState(0)
-  const containerRef = React.useRef<HTMLDivElement>(null)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const goToSlide = (index: number) => {
-    setCurrentIndex(index)
-  }
+    setCurrentIndex(index);
+  };
 
   // Calculate the offset based on card width (85%) + gap (1rem)
   const getTransform = () => {
     if (!containerRef.current) {
-      return 'translateX(0)'
+      return "translateX(0)";
     }
-    const containerWidth = containerRef.current.offsetWidth
-    const cardWidth = containerWidth * 0.9
-    const gap = 16
-    const offset = currentIndex * (cardWidth + gap)
+    const containerWidth = containerRef.current.offsetWidth;
+    const cardWidth = containerWidth * 0.9;
+    const gap = 16;
+    const offset = currentIndex * (cardWidth + gap);
     // Center the current card
-    const centerOffset = (containerWidth - cardWidth) / 2
-    return `translateX(${centerOffset - offset}px)`
-  }
+    const centerOffset = (containerWidth - cardWidth) / 2;
+    return `translateX(${centerOffset - offset}px)`;
+  };
 
   return (
     <div className="w-full">
       {/* Desktop: Grid view */}
       <div className="hidden grid-cols-2 gap-2 lg:grid lg:grid-cols-4 lg:gap-6">
-        {steps.map((step, index) => {
-          const Icon = iconMap[step.icon]
+        {steps.map((step) => {
+          const Icon = iconMap[step.icon];
           return (
-            <Card className="border-0 bg-white shadow-lg" key={index}>
+            <Card className="border-0 bg-white shadow-lg" key={`${step.icon}-${step.title}`}>
               <CardContent className="flex flex-col items-center p-4 text-center">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                   <Icon className="h-7 w-7 text-primary" />
@@ -101,7 +101,7 @@ export function BuyingProcessCarousel({ steps }: BuyingProcessCarouselProps) {
                 <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
               </CardContent>
             </Card>
-          )
+          );
         })}
       </div>
 
@@ -112,10 +112,10 @@ export function BuyingProcessCarousel({ steps }: BuyingProcessCarouselProps) {
             className="flex gap-4 transition-transform duration-300 ease-in-out"
             style={{ transform: getTransform() }}
           >
-            {steps.map((step, index) => {
-              const Icon = iconMap[step.icon]
+            {steps.map((step) => {
+              const Icon = iconMap[step.icon];
               return (
-                <div className="w-[90%] flex-shrink-0" key={index}>
+                <div className="w-[90%] flex-shrink-0" key={`${step.icon}-${step.title}`}>
                   <Card className="border-0 bg-white shadow-lg">
                     <CardContent className="flex flex-col items-center p-6 text-center">
                       <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
@@ -128,23 +128,23 @@ export function BuyingProcessCarousel({ steps }: BuyingProcessCarouselProps) {
                     </CardContent>
                   </Card>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
 
         {/* Dot indicators */}
         <div className="mt-6 flex justify-center gap-2">
-          {steps.map((_, index) => (
+          {steps.map((step, index) => (
             <button
               aria-label={`Go to step ${index + 1}`}
               className={cn(
-                'h-2 w-2 rounded-full transition-all',
+                "h-2 w-2 rounded-full transition-all",
                 index === currentIndex
-                  ? 'bg-white ring-2 ring-white ring-offset-2 ring-offset-black'
-                  : 'bg-white/40 hover:bg-white/60'
+                  ? "bg-white ring-2 ring-white ring-offset-2 ring-offset-black"
+                  : "bg-white/40 hover:bg-white/60"
               )}
-              key={index}
+              key={`${step.icon}-dot-${step.title}`}
               onClick={() => goToSlide(index)}
               type="button"
             />
@@ -152,5 +152,5 @@ export function BuyingProcessCarousel({ steps }: BuyingProcessCarouselProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -25,10 +25,10 @@
       "recommended": true,
       "suspicious": {
         "noExplicitAny": "warn",
-        "noArrayIndexKey": "warn"
+        "noArrayIndexKey": "error"
       },
       "complexity": {
-        "noForEach": "off",
+        "noForEach": "error",
         "noBannedTypes": "warn"
       },
       "style": {
@@ -37,10 +37,11 @@
       },
       "correctness": {
         "noUnusedVariables": "warn",
-        "useExhaustiveDependencies": "warn"
+        "useExhaustiveDependencies": "error"
       },
       "performance": {
-        "noBarrelFile": "off"
+        "noBarrelFile": "off",
+        "noNamespaceImport": "off"
       }
     }
   },
@@ -54,10 +55,10 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single",
+      "quoteStyle": "double",
       "jsxQuoteStyle": "double",
       "trailingCommas": "es5",
-      "semicolons": "asNeeded",
+      "semicolons": "always",
       "arrowParentheses": "always",
       "bracketSpacing": true,
       "bracketSameLine": false,

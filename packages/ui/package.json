@@ -12,7 +12,7 @@
     "./lib/*": "./src/lib/*.ts"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "biome check .",
     "clean": "rm -rf node_modules .turbo"
   },
   "dependencies": {
